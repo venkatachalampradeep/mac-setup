@@ -28,7 +28,10 @@ alias gp='git push'
 # =========================
 alias code='code .'
 alias subl='subl .'
-
+alias todo='subl ~/notes/todo.md'
+alias malias='subl ~/.zshrc'
+alias ralias='source ~/.zshrc'
+alias gs='git status'
 # =========================
 # Prompt
 # =========================
@@ -54,6 +57,10 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # File Explorer: nnn with cd-on-exit
 # =========================
 # Remove any existing alias first
+
+export NNN_EDITOR="nano"
+export VISUAL="nano"
+
 unalias n 2>/dev/null
 n ()
 {
@@ -84,3 +91,9 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
+
+PATH="/Users/pradeepvenkatachalam/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/pradeepvenkatachalam/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/pradeepvenkatachalam/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/pradeepvenkatachalam/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/pradeepvenkatachalam/perl5"; export PERL_MM_OPT;

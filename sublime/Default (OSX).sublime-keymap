@@ -1,0 +1,12 @@
+[
+  {
+    "keys": ["super+alt+j"],
+    "command": "select_lines",
+    "args": {"forward": true}
+  },
+  {
+    "keys": ["super+alt+k"],
+    "command": "select_lines",
+    "args": {"forward": false}
+  }
+]
