@@ -4,10 +4,24 @@
 ZSH_THEME="agnoster"
 
 # =========================
+# LLM Stuff
+# =========================
+alias g="llm -m gpt-4.1-mini"
+alias g4="llm -m gpt-4.1"
+
+rr() {
+  llm -m gpt-4.1-mini \
+  "You are a senior RTL engineer.
+  Review this code.
+  Suggest improvements.
+  Be concise." < "$1"
+}
+
+# =========================
 # Path
 # =========================
 export PATH="/opt/homebrew/bin:$PATH"
-
+export OPENAI_API_KEY=$(cat ~/.config/openai/key)
 # =========================
 # Aliases - Navigation
 # =========================
@@ -47,7 +61,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 # =========================
 # Plugins
 # =========================
-# Make sure you installed these via brew
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # fzf Ctrl-R fuzzy search
@@ -97,3 +110,6 @@ PERL5LIB="/Users/pradeepvenkatachalam/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}";
 PERL_LOCAL_LIB_ROOT="/Users/pradeepvenkatachalam/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/Users/pradeepvenkatachalam/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/pradeepvenkatachalam/perl5"; export PERL_MM_OPT;
+
+# Created by `pipx` on 2026-02-14 14:18:17
+export PATH="$PATH:/Users/pradeepvenkatachalam/.local/bin"

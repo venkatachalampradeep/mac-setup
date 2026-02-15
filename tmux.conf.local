@@ -1,0 +1,5 @@
+# Local overrides for gpakosz/.tmux (symlinked to ~/.tmux.conf.local)
+
+# Use vi keys in copy-mode
+set -g mode-keys vi
+setw -g mode-keys vi
