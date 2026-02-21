@@ -71,8 +71,8 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # =========================
 # Remove any existing alias first
 
-export NNN_EDITOR="nano"
-export VISUAL="nano"
+export NNN_EDITOR="vi"
+export VISUAL="vi"
 
 unalias n 2>/dev/null
 n ()

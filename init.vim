@@ -5,6 +5,8 @@
 " -----------------------------
 set nocompatible
 set number
+set autoread
+au CursorHold * checktime
 set relativenumber
 set hidden
 set mouse=a
