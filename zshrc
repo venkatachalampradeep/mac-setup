@@ -113,3 +113,8 @@ PERL_MM_OPT="INSTALL_BASE=/Users/pradeepvenkatachalam/perl5"; export PERL_MM_OPT
 
 # Created by `pipx` on 2026-02-14 14:18:17
 export PATH="$PATH:/Users/pradeepvenkatachalam/.local/bin"
+
+# Auto-start tmuxinator dev session on new interactive terminals
+if [ -z "$TMUX" ] && [ -z "$SSH_TTY" ] && [ -z "$DISABLE_AUTO_TMUXINATOR" ] && command -v tmuxinator >/dev/null 2>&1; then
+  tmuxinator start dev
+fi
