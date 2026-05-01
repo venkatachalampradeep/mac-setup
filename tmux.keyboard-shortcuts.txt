@@ -1,0 +1,28 @@
+tmux keyboard shortcuts
+
+Prefix = Ctrl+b
+
+Window management
+- Prefix+c: create a new window
+- Prefix+, : rename the current window
+- Prefix+w: list windows
+- Prefix+n: next window
+- Prefix+p: previous window
+
+Pane management
+- Prefix+%: split vertically
+- Prefix+": split horizontally
+- Prefix+arrow keys: move between panes
+- Prefix+z: toggle pane zoom
+- Prefix+x: kill the current pane
+
+Copy mode
+- Prefix+[ : enter copy mode
+- v: start selection
+- y: copy selection
+- q: exit copy mode
+
+Local additions
+- Prefix+r: reload `~/.tmux.conf`
+- Prefix+S: toggle synchronized panes
+- Prefix+K: open this shortcuts pane

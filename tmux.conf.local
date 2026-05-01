@@ -1,5 +1,23 @@
 # Local overrides for gpakosz/.tmux (symlinked to ~/.tmux.conf.local)
 
+# `bind` maps a key after the tmux prefix to a command.
+# `bind -n` maps a key directly, without pressing the prefix first.
+
 # Use vi keys in copy-mode
 set -g mode-keys vi
 setw -g mode-keys vi
+
+# Make tmux easier to use day to day.
+set -g mouse on
+set -g base-index 1
+setw -g pane-base-index 1
+set -g renumber-windows on
+
+# Prefix+r reloads this local config.
+bind r source-file ~/.tmux.conf \; display-message "tmux config reloaded"
+
+# Prefix+S toggles synchronized input for all panes in the current window.
+bind S setw synchronize-panes
+
+# Prefix+K opens a side pane that cats the shortcuts reference file.
+bind K split-window -h "cat ~/.tmux.keyboard-shortcuts.txt; read"
